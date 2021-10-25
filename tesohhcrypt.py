@@ -1,9 +1,14 @@
 import random
 
+print('-- TesohhCrypt v1.0 --')
+if __name__ == "__main__":
+	print('easter egg found')
+
+
 def crypt(text:str, key:dict):
 	'''Crypts plain text.
 	\nRemember, the `key` must be the converted one through `makeDictFromKeys()`'''
-	text = text.lower()
+	# text = text.lower()
 	text = text.replace(' ', '|')
 	newText = ""
 	for i in text:
@@ -21,7 +26,7 @@ def decrypt(text:str, key:dict):
 
 def createKey():
 	'''Creates a `Key1` and a `Key2`.'''
-	ak = "abcdefghijklmnopqrstuvwxyz`1234567890-=~!@#$%^&*()_+[];:',.<>/?|" #change this if you want to add new characters
+	ak = "ABCDEFGHIJKLMNOPQRSTUVWXYZ{}\"abcdefghijklmnopqrstuvwxyz`1234567890-=~!@#$%^&*()_+[];:',.<>/?|\\" #change this if you want to add new characters
 	# note that adding more characters will make the keys longer.
 	av = ak
 	# keyDict = {}
