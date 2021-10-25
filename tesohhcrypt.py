@@ -1,6 +1,9 @@
 import random
 
 def crypt(text:str, key:dict):
+	'''Crypts plain text.
+	\nRemember, the `key` must be the converted one through `makeDictFromKeys()`'''
+	text = text.lower()
 	text = text.replace(' ', '|')
 	newText = ""
 	for i in text:
@@ -8,6 +11,8 @@ def crypt(text:str, key:dict):
 	return newText
 
 def decrypt(text:str, key:dict):
+	'''Decrypts Tesohh-Crypted text.
+	\nRemember, the `key` must be the converted one through `makeDictFromKeys()`'''
 	newText = ""
 	invertedKey = dict((v,k) for k,v in key.items())
 	for i in text:
@@ -15,8 +20,10 @@ def decrypt(text:str, key:dict):
 	return newText.replace('|', ' ')
 
 def createKey():
-	ak = "abcdefghijklmnopqrstuvwxyz`1234567890-=~!@#$%^&*()_+[];:',.<>/?|"
-	av = "abcdefghijklmnopqrstuvwxyz`1234567890-=~!@#$%^&*()_+[];:',.<>/?|"
+	'''Creates a `Key1` and a `Key2`.'''
+	ak = "abcdefghijklmnopqrstuvwxyz`1234567890-=~!@#$%^&*()_+[];:',.<>/?|" #change this if you want to add new characters
+	# note that adding more characters will make the keys longer.
+	av = ak
 	# keyDict = {}
 
 	ak = list(ak)
@@ -29,6 +36,7 @@ def createKey():
 	return rk, rv
 
 def makeDictFromKeys(rk:str, rv:str):
+	'''Creates a TCrypt-Readable Key.'''
 	result = {}
 	for i in range(len(rk)):
 		result[rk[i]] = rv[i]
