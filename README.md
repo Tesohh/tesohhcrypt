@@ -1,6 +1,7 @@
 # TesohhCrypt
 ![TesohhCrypt example](img/screenshot.png)
-> TesohhCrypt is a zero-dependency Cryptography Python Module, with a method that i made.
+> TesohhCrypt is a zero-dependency Cryptography Python Module, with a method that i made. (likely someone already made a similar one, but i came up with it myself).
+>> **Please do not use this for anything serious**
 ### **2 Key System**
 TesohhCrypt uses a 2 Key System. Each key has the same length and the same characters, but in different order.
 
