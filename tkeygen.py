@@ -1,3 +1,6 @@
 import tesohhcrypt
 
-print(tesohhcrypt.createKey())
+rk, rv = tesohhcrypt.createKey()
+
+print(rk)
+print(rv)
